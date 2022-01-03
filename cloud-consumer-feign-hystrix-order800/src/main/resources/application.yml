@@ -1,0 +1,12 @@
+server:
+  port: 800
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+#开启降级服务,提供方不用是因为引入了openfeign依赖,8001没有引入
+feign:
+  hystrix:
+    enabled: true
